@@ -20,22 +20,21 @@
 	
 		
 		
-		// 선이 그려지고 있을 때 마우스 움직임에 따라 선이 그려질 위치를 표시할 선을 생성합니다
-		var moveLine = new daum.maps.Polyline({
-		    strokeWeight: 3, // 선의 두께입니다 
-		    strokeColor: '#db4040', // 선의 색깔입니다
-		    strokeOpacity: 0.5, // 선의 불투명도입니다 0에서 1 사이값이며 0에 가까울수록 투명합니다
-		    strokeStyle: 'solid' // 선의 스타일입니다    
+		var polyline = new daum.maps.Polyline({
+		    map: map,
+		    path: [
+			new daum.maps.LatLng(37.5662994,126.9757564),
+			new daum.maps.LatLng(37.0750377,127.1924257)
+		    ],
+		    strokeWeight: 2,
+		    strokeColor: '#FF00FF',
+		    strokeOpacity: 0.8,
+		    strokeStyle: 'dashed'
 		});
 
-        	// 서울시청 to 안성W
-        	var movepath;
-		movepath.push(37.5662994,126.9757564);
-		movepath.push(37.0750377,127.1924257);
-        	moveLine.setPath(movepath);    
-        	moveLine.setMap(map);
+
         
-        	var distance = Math.round(moveLine.getLength()), // 선의 총 거리를 계산합니다
+        	var distance = Math.round(polyline.getLength()), // 선의 총 거리를 계산합니다
                     
 
 		// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
