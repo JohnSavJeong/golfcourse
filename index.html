@@ -354,7 +354,7 @@
 		    for (var i = 0; i < carparkMarkers.length; i++) {  
 			carparkMarkers[i].setMap(map);
 
-			 bounds.extend(new daum.maps.LatLng(carparkMarkers[i].getPosition() ) );
+			 bounds.extend( carparkMarkers[i].getPosition() );
 		    }   
 			map.setBounds(bounds);
 		}
