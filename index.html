@@ -35,14 +35,12 @@
         	moveLine.setMap(map);
         
         	var distance = Math.round(clickLine.getLength() + moveLine.getLength()), // 선의 총 거리를 계산합니다
-            		content = '<div class="dotOverlay distanceInfo">총거리 <span class="number">' + distance + '</span>m</div>'; // 커스텀오버레이에 추가될 내용입니다
-        
-        
+                    
 
 		// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
 		var positions = [
 		    {
-			content: '<div class="dotOverlay distanceInfo">안성W총거리 <span class="number">' + distance + '</span>m</div>', 
+			content: '<div class="dotOverlay distanceInfo">안성W거리 <span class="number">' + distance + '</span>m</div>', 
 			latlng: new daum.maps.LatLng(37.0750377,127.1924257)
 		    },
 		    {
@@ -91,8 +89,7 @@
 			infowindow.close();
 		    };
 		}
-
-		
+	
 		
 		
 	</script>
