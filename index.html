@@ -32,7 +32,6 @@
 		    strokeStyle: 'dashed'
 		});
 
-
         
         	var distance = Math.round(polyline.getLength()), // 선의 총 거리를 계산합니다
                     
@@ -40,7 +39,7 @@
 		// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
 		var positions = [
 		    {
-			content: '<div class="dotOverlay distanceInfo">안성W거리 <span class="number">' + distance + '</span>m</div>', 
+			content: '<div>골프존카운티안성W'+distance+'</div>', 
 			latlng: new daum.maps.LatLng(37.0750377,127.1924257)
 		    },
 		    {
