@@ -17,7 +17,6 @@
 		    };
 
 		var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		
 	
 		
 		
@@ -30,7 +29,9 @@
 		});
 
         	// 서울시청 to 안성W
-        	var movepath = [[37.5662994,126.9757564], [37.0750377,127.1924257]];
+        	var movepath;
+		movepath.push(37.5662994,126.9757564);
+		movepath.push(37.0750377,127.1924257);
         	moveLine.setPath(movepath);    
         	moveLine.setMap(map);
         
