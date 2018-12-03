@@ -348,13 +348,11 @@
 		
 		// LatLngBounds 객체에 좌표를 추가합니다
 	      var bounds = new daum.maps.LatLngBounds();
-
-
 		
 	    for (var i = 0; i < carparkMarkers.length; i++) {  
 		carparkMarkers[i].setMap(map);
 		        
-		 bounds.extend(new daum.maps.LatLng(carparkPositions[i].y, carparkPositions[i].x) );
+		 bounds.extend(new daum.maps.LatLng(carparkMarkers[i].y, carparkMarkers[i].x) );
 	    }   
 		map.setBounds(bounds);
 	}
