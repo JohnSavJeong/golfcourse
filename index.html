@@ -135,8 +135,10 @@
 
 		// 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
 		function clickListener(map, marker) {
+			window.alert("AA");
 		    return function() {
 
+			    /*
 			var polyline = new daum.maps.Polyline({
 			    map: map,
 			    strokeWeight: 2,
@@ -166,7 +168,7 @@
 		      	// 마커 위에 인포윈도우를 표시합니다
 		      	infowindow2.open(map, marker);  
 			    
-			    
+			    */
 		    };
 		}
 		
