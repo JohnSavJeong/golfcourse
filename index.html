@@ -4,19 +4,20 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Daum 지도 시작하기</title>
+	<title>Golf Courses in Korea</title>
 </head>
 <body>
-	<div id="map" style="width:500px;height:400px;"></div>
+	<div id="map" style="width:800px;height:500px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9205dd90427c61e60b3893c1aae2f168"></script>
 	<script>
 		var container = document.getElementById('map');
 		var options = {
 			center: new daum.maps.LatLng(33.450701, 126.570667),
-			level: 3
+			level: 7
 		};
 
 		var map = new daum.maps.Map(container, options);
+		addMarker(new daum.maps.LatLng(33.450701, 126.570667));
 	</script>
 </body>
 </html>
